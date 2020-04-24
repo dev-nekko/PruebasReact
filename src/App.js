@@ -1,20 +1,20 @@
-import React from 'react';
-import Nav from './components/Nav';
-import Main from './components/Main';
+import React from "react";
+import Nav from "./components/Nav";
+import Main from "./components/Main";
 
-import './App.scss'
+import "./App.scss";
 
 function App() {
   return (
-   <div className="outerWrap">
-     <div className="App">
-       <Nav />
-       <Main />
-     </div>
-     
-     <div className="musicControls" > controles de musica</div>
-   </div> 
-  )
+    <div className="outerWrap">
+      <div className="App">
+        <Nav />
+        <Main />
+      </div>
+
+      <div className="musicControls"> controles de musica</div>
+    </div>
+  );
 }
 
-export default App
+export default App;
