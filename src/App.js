@@ -1,15 +1,18 @@
-import React from 'react'
-import Nav from './components/Nav'
+import React from 'react';
+import Nav from './components/Nav';
+import Main from './components/Main';
 
 import './App.scss'
 
-const App = () => {
+function App() {
   return (
    <div className="outerWrap">
      <div className="App">
        <Nav />
+       <Main />
      </div>
-     <div className="musicControls" ></div>
+     
+     <div className="musicControls" > controles de musica</div>
    </div> 
   )
 }
