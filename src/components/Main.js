@@ -1,49 +1,19 @@
 import React from "react";
-import { ReactComponent as Playicon } from "../svgs/play.svg";
+import Categories from "./Categories";
+import { Switch, Route } from "react-router-dom";
+import PlaylistPage from "./pages/Playlist";
 
 const Main = () => {
   return (
     <div className="main">
-      <div className="upperNav"> dummy test </div>
+      <div className="upperNav">dummy text</div>
       <div className="mainContent">
-        <div className="cardsWrap">
-          <h1> Algo para ti </h1>
-          <div className="card">
-            <div className="cardImage">
-              <img
-                src="https://images.unsplash.com/photo-1488376739361-ed24c9beb6d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80"
-                alt="Pic 1"
-              />
-            </div>
-            <div className="cardContent">
-              <h3> Musica Preferida </h3>
-            </div>
-            <span className="playIcon">
-              <Playicon />
-            </span>
-          </div>
-        </div>
-        <div className="cardsWrap">
-          <h2> Concentracion </h2>
-          <p>Musica para ayudarte a estudiar</p>
-          <div className="card">
-            <div className="cardImage">
-              <img
-                src="https://images.unsplash.com/photo-1488376739361-ed24c9beb6d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80"
-                alt="Pic 1"
-              />
-            </div>
-            <div className="cardContent">
-              <h3> Musica Para concentracion </h3>
-              <span>
-                Minimalizta, electronica and musica moderna para concentrarse
-              </span>
-            </div>
-            <span className="playIcon">
-              <Playicon />
-            </span>
-          </div>
-        </div>
+        <Switch>
+          <Route path="/" exact component={Categories}></Route>
+          <Route path="/search">Search</Route>
+          <Route path="/your-library">Your library</Route>
+          <Route path="/playlist/:id" component={PlaylistPage}></Route>
+        </Switch>
       </div>
     </div>
   );
