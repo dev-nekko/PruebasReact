@@ -1,5 +1,8 @@
 import React from "react";
 import { ReactComponent as Homeicon } from "../svgs/home.svg";
+import { ReactComponent as Searchicon } from "../svgs/search.svg";
+import { ReactComponent as Libraryicon } from "../svgs/library.svg";
+
 const Nav = () => {
   return (
     <div className="navBar">
@@ -16,8 +19,14 @@ const Nav = () => {
         <li className="active">
           <Homeicon /> Inicio
         </li>
-        <li>Buscar</li>
-        <li>Tu Libreria</li>
+        <li>
+          <Searchicon />
+          Buscar
+        </li>
+        <li>
+          <Libraryicon />
+          Tu Libreria
+        </li>
       </ul>
       <div className="cookies">
         <span>Cookies</span>
